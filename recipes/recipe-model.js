@@ -1,6 +1,6 @@
-const db = require("../db-config")
+const db = require("../data/db-config")
 
-function getRecipes(id) {
+function getRecipes() {
     // SELECT r.name, r.author, i.ingredient
     // FROM recipes AS r
     // JOIN ingredients as i

@@ -1,6 +1,6 @@
 const express = require("express")
 const helmet = require("helmet")
-const db = require("./db-config")
+const db = require("./data/db-config")
 const recipeRouter = require("./recipes/recipe-router")
 
 const server = express()
