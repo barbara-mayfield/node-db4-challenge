@@ -6,6 +6,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "helmet": "^3.21.2",
+<<<<<<< HEAD
     "knex": "^0.20.8",
     "sqlite3": "^4.1.1"
   },
@@ -14,6 +15,15 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "knex": "^0.20.7",
+    "nodemon": "^2.0.2",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "server": "nodemon index.js"
+>>>>>>> 4482250e2b53aca565812314b0e70f7af31d849e
   },
   "repository": {
     "type": "git",
