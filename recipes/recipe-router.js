@@ -13,24 +13,24 @@ router.get("/", async(req, res, next) => {
     }
 })
 
-router.get(":id/ingredients", async(req, res, next) => {
+router.get("/ingredients/:id", async(req, res, next) => {
     try {
         const { id } = req.params
         const ingredients = await recipeModel.getShoppingList(id)
 
         res.json(ingredients)
-    } catch {
+    } catch(err) {
         next(err)
     }
 })
 
-router.get(":id/instructions", async(req, res, next) => {
+router.get("instructions/:id", async(req, res, next) => {
     try {
         const { id } = req.params
         const instructions = await recipeModel.getInstructions(id)
 
         resizeBy.json(instructions)
-    } catch {
+    } catch(err) {
         next(err)
     }
 })
