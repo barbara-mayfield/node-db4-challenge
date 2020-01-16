@@ -1,15 +1,12 @@
 const db = require("../data/db-config")
 
-function getRecipes(id) {
-    // SELECT r.name, r.author, i.ingredient
-    // FROM recipes AS r
-    // JOIN ingredients as i
-    // WHERE i.id = r.id;
+function getRecipes() {
+    // SELECT * from recipes as r
+    // JOIN ingredients AS i ON i.id = r.id
+    // JOIN steps AS s ON s.id = r.id;
 
     return db("recipes as r")
-        .join("ingredients as i", "i.ingredient", "i.id")
-        .where({ id })
-        .select("r.name", "r.author", "i.ingredient")
+        .select("*")
 } 
 
 module.exports = {
